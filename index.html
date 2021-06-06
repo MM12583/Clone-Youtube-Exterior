@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- 連接 google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>MyYoutube</title>
+  </head>
+  <body>
+    <!-- 最上一層 -->
+    <header class="header">
+      <!-- div.header_left+from.form.search-bar+div.menu-icons 可直接打產生 -->
+      <!-- 左 -->
+      <div class="header_left">
+      <!-- a>img.header_menu -->
+      <!-- 圖片失效 顯示alt -->
+      <a href="#"><img src="images/menu.svg" alt="Menu" class="header_menu" /></a>
+      <a href="#"><img src="images/youtube-logo.png" alt="Youtube Logo" class="youtube_logo" width="80px" /></a> 
+      </div>
+      <!-- 中 -->
+      <from class="search_bar">
+        <input type="search" class="search-input" placeholder="搜索">
+        <button type="submit" class="search-btn"><img src="images/search.svg" alt="Search"></button>
+        <a href="#"><img src="images/keyboard_voice.svg" alt="Voice over" width="26px"></a>
+      </from>
+      <!-- 右 -->
+      <div class="menu_icons">
+        <a href="#"><img src="images/video_call.svg" alt="Upload video" width="26px"></a>
+        <a href="#"><img src="images/apps.svg" alt="Apps" ></a>
+        <a href="#"><img src="images/notifications.svg" alt="Notifications" width="26px"></a>
+        <a href="#"><img src="images/your_channel_icon.jpg" alt="Your_channel" class="user_icon""></a>
+      </div>
+    </header>
+    <div class="mainbody">
+      <section class="sidebar">
+        <div class="sidebar_categories">
+          <!-- span 字體統一 設同 Class -->
+          <div class="sidebar_category active">
+            <img class="home-icon" src="images/home.svg" alt="Home">
+            <span class="sidebar-font">首頁</span></img>
+          </div> <!-- 首頁默認被選 -->
+          <div class="sidebar_category">
+            <img class="expore-icon" src="images/explore.svg" alt="Explore">
+            <span class="sidebar-font">探索</span></img>
+          </div>
+          <div class="sidebar_category">
+            <img class="subscriptions-icon" src="images/subscriptions.svg" alt="Subscriptions">
+            <span class="sidebar-font">訂閱內容</span></img>
+          </div>
+          <div class="sidebar_category">
+            <img class="video_library" src="images/video_library.svg" alt="Video_library">
+            <span class="sidebar-font">影片庫</span></img>
+          </div>
+        </div>
+      </section>
+      <section class="video">
+        <section class="video-section">
+          <!-- 影片縮圖 -->
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="video-section">
+          <!-- 推薦& 關閉按鈕 -->
+          <h3 class="video-section-title">
+            推薦影片
+            <button class="video-section-title-close" type="button">&times;</button>
+          </h3>
+          <!-- 影片縮圖 -->
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="video-section">
+          <!-- 影片縮圖 -->
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+          <article class="video-container">
+            <!-- data-duration 描述訊息 -->
+            <a href="#" class="thumbnail" data-duration="15:20">
+              <img src="images/video_thumbnail.jpg" alt="Video thumbnail" class="thumbnail-image">
+            </a>
+            <!-- 影片說明 -->
+            <div class="video-description">
+              <!-- 作者圖 -->
+              <a href="#">
+                <img class="channel-icon" src="images/channel-icon.jpg" alt="Channel icon">
+              </a>
+              <!-- 文  -->
+              <div class="video-details">
+                <a href="#" class="video-title">影片標題</a>
+                <a href="#" class="video-channel-name">頻道名稱</a>
+                <div class="video-metadata">
+                  <!-- span{20萬人觀看•}+span{2小時前} -->
+                  <span>20.5 萬人觀看•</span><span>2 小時前</span>
+                </div> 
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

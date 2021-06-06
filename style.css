@@ -1,0 +1,258 @@
+*,
+*::after,
+*::before {
+  /* width hight 控制不同*/
+  /*預設為 content box => 內容大小 + padding、border 會變大 */
+  /* border-box 範圍為 border + padding border 內容會納縮 (佳) */
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif; /* goole font 提供 */
+}
+
+body {
+  margin: 0px; /*取消默認邊距*/
+}
+
+/* 1rem 預設16px */
+/* display flex 使用 rem 單位 可變動 */
+
+/* header */
+.header {
+  display: flex; /* 彈性盒子 可符合任何設備 */
+  justify-content: space-between; /*平均分配*/
+  align-items: center;
+  padding: 1rem;
+}
+
+.header_left {
+  display: flex;
+  align-items: center; /*可垂直對齊*/
+}
+
+.header_menu {
+  /* margin 上右下左 */
+  /* margin-left: 16px;
+  margin-right: 16px; */
+  margin: 0px 16px;
+}
+
+.youtube_logo {
+  margin-left: 16px;
+}
+
+.menu_icons {
+  /* 格線容器 分4個 */
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  grid-gap: 1.5rem;
+}
+
+.user_icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.search_bar {
+  display: flex;
+  flex-grow: 1; /*設定可以擴充 擴充至最大(與左右距離不變下最大)*/
+  margin: 0px 4rem;
+}
+
+.search-input {
+  /* 被 search_bar (box) 限制下的 100% */
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.6em;
+  border: 1px solid #c6c6c6;
+  /*取消圓角 (默認有些微圓角)*/
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  border: 1px solid #c6c6c6;
+  /* 取消左邊框線 */
+  border-left: none;
+  background-color: #f8f8f8;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  /*增加按鈕指標*/
+  cursor: pointer;
+}
+
+/* hover 滑鼠移過去 、 active 按下去 */
+.search-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* : 指屬性 , space 指裡面某標籤 */
+.search_bar a {
+  display: flex;
+  align-items: center;
+  margin: 0px 1rem;
+}
+
+/* body */
+.mainbody {
+  display: flex;
+  /*100vh 瀏覽器高度 (盒子下)*/
+  /* height: calc(100vh - 72.4px);  減去上層header高度 符合整頁 */
+  height: calc(100% - 72.4px);
+}
+
+.sidebar {
+  background-color: white;
+  width: 230px;
+}
+
+.sidebar-font {
+  font-size: 0.9rem;
+  margin-left: 24px;
+}
+
+.sidebar_category {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+/* Class 內 Class */
+.sidebar_category.active {
+  background-color: #e5e5e5;
+  font-weight: bold;
+}
+
+/*滑鼠移動到效果*/
+.sidebar_category:hover {
+  background-color: #f9f9f9;
+}
+
+.sidebar_category.active:hover {
+  background-color: #ddd;
+}
+
+/* Video */
+.video-container {
+  display: flex;
+  flex-direction: column; /*改行排列*/
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 100%;
+}
+
+.video-description {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.channel-icon {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin-right: 0.75rem;
+}
+
+.video-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title {
+  color: black;
+  text-decoration: none; /* 取消下滑線 */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.video-channel-name {
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+  text-decoration: none;
+  transition: color 600ms; /* 顏色變化 */
+}
+
+.video-channel-name:hover {
+  color: #111;
+}
+
+/* 兩個 Class 一起選 */
+.video-channel-name,
+.video-metadata {
+  color: #555;
+}
+
+/* 重要 */
+.thumbnail {
+  position: relative; /* 相對於原來位置 */
+  display: flex;
+}
+
+.thumbnail::before {
+  /* before 在本 Class 之前 , 改 after 也可以 */
+  content: attr(data-duration); /* 獲得 data-duration 值 (15:20) */
+  /* 對於 thumbnail 相對位置的 絕對位置 */
+  /* 絕對位置為整張圖 */
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+
+  /* 設定邊框 */
+  background-color: black;
+  font-size: 0.9rem;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+}
+
+/* 整個影片 box */
+.video {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.video-section {
+  display: grid;
+  /* 3欄 fr欄位大小 1fr 2fr 1fr (1:2:1) */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* auto-fill=>自動填充(抓最小值可塞最大個數), 設最大最小值 */
+  /* auto-fill 會留白 、 auto-fit 不會 */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem 1rem; /* 格線間距 上右下左*/
+  margin: 0px 1.5rem;
+  padding: 3rem 0;
+
+  border-top: 1px solid #ddd;
+}
+
+.video-section:first-child {
+  border: none;
+}
+
+/* recommend video */
+.video-section-title {
+  display: flex;
+  grid-column: 1/-1; /* 開始到結束=>占據整行 */
+  /* grid-column/rows : span n => n 佔幾格 */
+  justify-content: space-between;
+  align-items: center;
+  margin: -0.5rem 0rem; /* 可用負數減少 */
+}
+
+.video-section-title-close {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #555;
+}
+
+/* 格線容器 內容區大小 最小150px 超過自動調整  */
+/* grid-template-rows: minmax(150px, auto); */
